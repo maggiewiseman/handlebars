@@ -8,7 +8,7 @@
 	<main id="main-section">
 
 	</main>
-	<script id="post-template" type="text/x-handlebars-template"></script>
+	<script id="post-template" type="text/x-handlebars-template">
 		{{#this}}
 			<article>
 				<h1>The title is: {{title}}</h1>
@@ -17,24 +17,20 @@
 			</article>
 		{{/this}} 
 	</script>
-	<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-VVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/handlebars-v4.0.5.js"> </script>
   <script type="text/javascript" src="js/handlebars.runtime-v4.0.5.js" ></script>
   <script type="text/javascript">
-  	$(function () {
   		'use strict';
   	var postsArray = [{title: "post 1", author: "Maggie", post:" a bunch of text." },
-  										{title: "post 2", author: "Lizzy", post: "a bunch of text. lorem ipsum" },
-  										{title: "post 3", author: "Charley", post: "a bunch of text. this is not a poem." }];
+  					  {title: "post 2", author: "Lizzy", post: "a bunch of text. lorem ipsum" },
+  					  {title: "post 3", author: "Charley", post: "a bunch of text. this is not a poem." }];
   	console.log(postsArray);
 
   	var hbTemplate = Handlebars.compile($("#post-template").html());
   	$('#main-section').html(hbTemplate(postsArray));
 
-  });
+ 
   </script>
 
 
